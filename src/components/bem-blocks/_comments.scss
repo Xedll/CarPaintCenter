@@ -1,0 +1,44 @@
+.comments {
+
+   &__container {
+      min-width: 0;
+   }
+
+   &__head {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 63px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 66px;
+   }
+
+
+   &__title {
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 400;
+   }
+
+   &__slider {
+      display: flex;
+      margin: 0 55px;
+      align-items: center;
+      justify-content: center;
+     
+   }
+}
+.slider__img {
+   margin: 0 auto;
+}
+.swiper {
+   text-align: center;
+   vertical-align: middle;
+   width: 600px;
+   height: 136px;
+ }

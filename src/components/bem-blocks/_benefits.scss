@@ -1,0 +1,63 @@
+.benefits {
+   &__container {
+   }
+
+   &__head {
+      text-align: center;
+      color: #FFFFFF;
+      font-style: normal;
+      margin-bottom: 60px;
+   }
+
+   &__title {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 63px;
+   }
+
+   &__subtitle {
+      font-family: 'Arial';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(1, minmax(100px, 1fr));
+      gap:15px;
+   }
+
+   &__item {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 10px;
+      &>*:not(:last-child){
+         margin-bottom: 30px;
+      }
+   }
+
+   &__itemImg {
+      max-width: 35px;
+      max-height: 35px;
+      & img {
+         width: 100%;
+      }
+   }
+
+   &__itemContent {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      color: #252525;
+   }
+}
+

@@ -1,0 +1,882 @@
+@import 'base/*.scss';
+@import 'global/*.scss';
+@import '**/_*.scss';
+@import '../components/**/*.scss';
+
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family: 'Inter', sans-serif;background: #fff;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+._container{
+   max-width: 1120px;
+   margin: 0 auto;
+}
+.img {
+   width: 100%;
+}
+
+.page {
+   &__main{
+      background: url(../img/main/bg.webp) center/cover ;
+   }
+   &__details {
+      margin: 62px 0 90px 0;
+   }
+   &__benefits {
+      padding: 60px 0 90px 0;
+      background: url(../img/benefits/bg.webp) center/cover ;
+   }
+   &__services {
+      margin: 60px 0 90px 0;
+   }
+   &__examples {
+      margin: 60px 0 90px 0;
+   }
+   &__form {
+      padding: 60px 0 90px 0;
+      position: relative;
+   }
+   &__comments {
+      padding: 60px 0 90px 0;
+      background: url(../img/slider/bg.webp) center/cover no-repeat ;
+   }
+   
+}
+.warning {
+   color: #ED7173;
+}
+
+
+
+.swiper-pagination-bullet{
+      width: 10px;
+      height: 10px;
+      background: #979797;
+      &-active{
+         background: #bad6f1;
+      }
+   }
+
+.swiper-button-next, .swiper-button-prev{
+   color:  #bad6f1;
+}
+
+@media(max-width:960px){
+   .page {
+      &__details {
+         margin-bottom: 60px;
+      }
+      &__benefits {
+         padding: 45px 0 60px 0;
+      }
+      &__services {
+         margin: 45px 0 60px 0;
+      }
+      &__comments {
+         padding: 45px 0 60px 0;
+      }
+      &__examples {
+         margin: 45px 0 60px 0;
+      }
+   }
+   .header {
+      &__menu {
+         margin-left: 80px;
+      }
+      &__adress {
+         display: none;
+      }
+   }
+   .services{
+      &__grid{
+         grid-template-columns: repeat(4, minmax(210px, 1fr));
+      }
+   }
+   .examples {
+      &__grid {
+         grid-template-columns: repeat(4,minmax(210px,1fr));
+      }
+   }
+   .main {
+      &__container{
+      padding-top: 210px;
+
+      }
+      &__title {
+         font-size: 42px;
+         line-height: 49px;
+      }
+      &__subtitle{
+         font-size: 22px;
+         line-height: 26px;
+      }
+      &__content {
+         max-width: 55%;
+         margin-bottom: 100px;
+      }
+      &__about {
+         gap: 0 30px;
+      }
+   }
+   .details {
+      &__title {
+         font-weight: 700;
+         font-size: 40px;
+         line-height: 47px;
+      }
+      &__subtitle {
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__description {
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__num {
+         font-size: 100px;
+         line-height: 117px;
+      }
+      &__grid {
+         margin: 0 95px;
+         gap: 105px 96px;
+      }
+   }
+   .benefits {
+      &__title {
+         font-size: 40px;
+         line-height: 47px;
+         margin-bottom: 10px;
+      }
+      &__head  {
+         margin-bottom: 45px;
+      }
+      &__subtitle {
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__itemContent {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      
+      &__item {
+         padding: 20px 10px;
+         &>*:not(:last-child){
+            margin-bottom: 12px;
+         }
+         border-radius: 4px;
+      }  
+      &__grid {
+         margin: 0 36px;
+      }
+   }
+   .services {
+      &__title {
+         font-size: 40px;
+         line-height: 47px;
+      }
+      &__subtitle {
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__grid {
+         margin: 0 35px;
+         margin-bottom: 40px;
+      }
+      &__subtitle {
+         margin-bottom: 45px;
+
+      }
+   }
+   .comments {
+      &__title {
+         font-size: 40px;
+         line-height: 47px;
+      }
+      &__subtitle{
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__head {
+         margin-bottom: 50px;
+      }
+   }
+   .examples {
+      &__title {
+         font-size: 40px;
+         line-height: 47px;
+         margin-bottom: 10px;
+      }
+      &__subtitle{
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__head {
+         margin-bottom: 45px;
+      }
+      &__grid {
+         margin: 0 36px;
+         margin-bottom: 40px;
+      }
+   }
+   .form {
+      &__title {
+         font-size: 22px;
+         line-height: 26px;
+      }
+      &__about {
+         font-size: 16px;
+         line-height: 18px;
+      }
+      &__container {
+         margin: 0 110px;
+      }
+   }
+   .footer {
+      &__content {
+         &>*:nth-child(5),&>*:nth-child(4),&>*:nth-child(3),&>*:nth-child(2){
+            display: none;
+         }
+         display: flex;
+         padding: 26px;
+      }
+      &__text {
+         display: flex;
+         flex-direction: row-reverse;
+         width: 100%;
+         &>*{
+            display: flex;
+            flex-direction: column;
+            &>*:not(:last-child){
+               margin-bottom: 15px;
+            }
+            
+         }
+         justify-content: space-between;
+         &>*:last-child{
+            text-align: left;
+         }
+         &>*:first-child{
+            text-align:right;
+         }
+         margin-left: 80px;
+      }
+   }
+}
+
+@media (max-width:768px){
+   body.lock {
+      overflow: hidden;
+   }
+   .page {
+      &__details {
+         margin: 40px 0 50px 0;
+      }
+      &__benefits {
+         padding: 40px 0 50px 0;
+      }
+      &__services {
+         margin: 40px 0 50px 0;
+      }
+      &__comments{
+         padding: 40px 0 50px 0;
+      }
+      &__examples {
+         margin: 40px 0 50px 0;
+      }
+   }
+   .header {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: fit-content;
+      z-index: 50;
+      &__burger{
+         display: block;
+      }
+      &__container {
+      }
+      &__menu {
+         position: fixed;
+         z-index: 50;
+         width:100%;
+         height: 100%;
+         top: -100%;
+         right: 0;
+         background: #212121;
+         flex-direction: column;
+         padding: 60px 0 0 15%;
+         margin: 0;
+         transition: all .7s;
+         justify-content: start;
+         &.active {
+            top: 0;
+         }
+         &::before {
+            content: '';
+            padding-left: 15%;
+            background: #D9D9D9;
+            width: 15%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 50;
+         }
+         display: flex;
+         overflow: auto;
+         flex-direction: column;
+      }
+      &__nav {
+         flex-direction: column;
+         text-align: center;
+         margin-top: 87px;
+         &>*:not(:last-child){
+            margin-right: 0px;
+            margin-bottom: 42px;
+         }
+         &>*{
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #FFFFFF;
+         }
+         margin-bottom: 100px;
+      }
+      &__burger{
+         z-index: 51;
+         justify-self: end;
+         
+      }
+      &__content{
+         justify-content: space-between;
+      }
+      &__tel {
+         font-family: 'Arial';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 23px;
+         color: #FFFFFF;
+         text-align: center;
+      }
+      
+   }
+   .main {
+      &__title {
+         font-size: 42px;
+         line-height: 49px;
+      }
+      &__title,&__subtitle {
+         max-width: 400px;
+      }
+      &__content {
+         max-width: 100%;
+      }
+      &__subtitle {
+         margin-bottom: 70px;
+      }
+      &__about {
+         margin: 0 28px;
+         gap: 0 25px;
+         grid-template-columns: repeat(3,220px);
+      }
+      &__itemText {
+               font-size: 14px;
+               line-height: 16px;
+      }
+
+   }
+   .details {
+      &__title{
+         font-size: 30px;
+         line-height: 35px;
+      }
+      &__subtitle {
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__head {
+         margin-bottom: 60px;
+      }
+      &__num {
+         font-size: 70px;
+         line-height: 82px;
+         top:-47px;
+         z-index: 2;
+      }
+      &__description {
+         position: relative;
+         z-index: 3;
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__grid {
+         gap:60px 50px;
+         margin: 0 40px 0 60px;
+      }
+   }
+   .benefits {
+      &__title {
+         font-size: 30px;
+         line-height: 35px;
+      }
+      &__subtitle {
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__itemContent {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__itemImg {
+         max-width: 20px;
+         max-height: 20px;
+      }
+      &__item {
+         justify-content: start;
+      }
+   }
+   .services {
+      &__grid{
+         grid-template-columns: repeat(4, 168px);
+         grid-template-rows: repeat(1, 170px);
+         gap: 10px;
+         margin: 0 30px 45px;
+      }
+      &__item {
+         max-width: 100%;
+      }
+      &__itemBg{
+         width:100%;
+         height: 139px;
+      }
+      &__itemContent {
+         font-size: 12px;
+         padding: 9px 0;
+         line-height: 14px;
+      }
+      &__moteBtn {
+         font-size: 16px;
+         line-height: 18px;
+         padding: 12px 17px;
+      }
+   }
+   .comments {
+      &__title {
+         font-size: 30px;
+         line-height: 35px;
+      }
+      &__subtitle {
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__head {
+         margin-bottom: 30px;
+      }
+   }
+   .examples {
+      &__title {
+         font-size: 30px;
+         line-height: 35px;
+      }
+      &__subtitle {
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__head {
+         margin-bottom: 40px;
+      }
+      &__grid{
+         grid-template-columns: repeat(4, 168px);
+         grid-template-rows: repeat(1, 168px);
+         margin: 0 30px;
+         gap: 0 13px;
+         margin-bottom: 40px;
+      }
+   }
+   .form {
+      &__container {
+         margin: 0;
+      }
+      &__title {
+         font-size: 18px;
+         margin: 0 104px;
+         line-height: 21px;
+         max-width: 100%;
+         margin-bottom: 40px;
+      }
+      &__form {
+         display: flex;
+         flex-direction: column-reverse;
+         margin: 0 204px;
+      }
+      &__inputs{
+         margin-bottom: 20px;
+      }
+      &__about {
+         font-size: 16px;
+         line-height: 18px;
+         margin-bottom: 30px  ;
+      }
+   }
+   .footer {
+      &__text {
+         margin-left: 24px;
+      }
+   }
+}
+@media (max-width:320px){
+   .page {
+      &__main {
+         background-position: left;
+      }
+      &__details {
+         margin: 40px 0;
+      }
+      &__benefits {
+         padding: 40px 0;
+      }
+      &__services {
+         margin: 40px 0;
+      }
+      &__comments {
+         padding: 40px 0;
+      }
+      &__examples{
+         margin: 40px 0;
+      }
+      &__form {
+         padding: 30px 0 40px;
+      }
+   }
+   .header {
+      position: absolute;
+      height: fit-content;
+      top: 0;
+      left: 0;
+      &__logo {
+         max-width: 80px;
+      }
+      &__burger {
+         width: 30px;
+         height: 20px;
+         & span {
+            top:8px;
+         }
+         &::before,&::after, span {
+            height: 3px;
+         }
+      }
+
+   }
+   .main {
+      &__container {
+         padding-top: 120px;
+         padding-left: 15px;
+         padding-right: 15px;
+         padding-bottom: 20px;
+
+      }
+      &__content {
+         margin: 0;
+      }
+      &__title {
+         font-size: 25px;
+         line-height: 29px;
+         margin-bottom: 7px;
+      }
+      &__subtitle {
+         font-size: 14px;
+         line-height: 16px;
+         margin-bottom: 33px;
+      }
+      &__buttons {
+         &>*:not(:last-child){
+            margin-bottom: 15px;
+         }
+         margin-bottom: 20px;
+      }
+      &__btn {
+         font-size: 12px;
+         line-height: 14px;
+         padding: 10px 15px;
+      }
+      &__description {
+         font-size: 12px;
+         line-height: 14px;
+         max-width: 70%;
+         margin-bottom: 60px;
+      }
+      &__about {
+         grid-template-columns: repeat(1,1fr);
+         margin: 0;
+         gap:10px 0
+      }
+      &__item {
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         padding: 17px;
+         &>*:not(:last-child){
+            margin-bottom: 0;
+         }
+      }
+      &__itemIcon {
+         flex: 0 0 22px;
+      }
+      &__itemText {
+         flex:0 0 75%;
+         text-align: left;
+         margin-left: 25px;
+      }
+   }
+   .details {
+      &__title {
+         font-size: 15px;
+         line-height: 18px;
+      }
+      &__subtitle {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__head {
+         margin-bottom: 60px;
+      }
+      &__num {
+         font-size: 70px;
+         line-height: 82px;
+         left:-13px;
+         top: -47px;
+      }
+      &__description {
+         font-size: 10px;
+         line-height: 11px;
+      }
+      &__grid {
+         gap: 45px 25px;
+         margin: 0 15px;
+      }
+      &__item {
+
+      }
+   }
+   .benefits {
+      &__title {
+         font-size: 15px;
+         line-height: 18px;
+      }
+      &__subtitle {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__head {
+         margin-bottom: 30px;
+      }
+      &__grid {
+         grid-template-columns: repeat(1,1fr);
+         grid-template-rows: repeat(1,1fr);
+         margin: 0 15px;
+      }
+      &__item {
+         flex-direction: row;
+         padding: 12px;
+         &>*:not(:last-child){
+            margin-bottom: 0;
+         }
+      }
+      &__itemImg {
+         flex: 0 0 25px;
+      }
+      &__itemContent {
+         flex: 1 0 75%;
+         text-align: left;
+         margin-left: 20px;
+      }
+   }
+   .services {
+      &__title {
+         font-size: 15px;
+         margin-bottom: 10px;
+         line-height: 18px;
+      }
+      &__subtitle {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__head {
+         margin-bottom: 30px;
+      }
+      &__grid {
+         grid-template-columns: repeat(2,1fr);
+         grid-template-rows: repeat(1, 140px);
+         margin: 0 15px;
+         margin-bottom: 25px;
+         gap: 10px;
+      }
+      &__itemBg {
+         height: 115px;
+      }
+      &__btn {
+         font-size: 16px;
+         line-height: 18px;
+      }
+   }
+   .comments {
+      &__title {
+         font-size: 15px;
+         line-height: 18px;
+         margin-bottom: 10px;
+      }
+      &__subtitle {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__head {
+         margin-bottom: 30px;
+      }
+      .slider__img {
+         max-width: 250px;
+      }
+   }
+   .examples{
+      &__title {
+         font-size: 15px;
+         line-height: 18px;
+      }
+      &__subtitle {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__head {
+         margin-bottom: 30px;
+      }
+      &__grid {
+         grid-template-columns: repeat(2,139px);
+         grid-template-rows: repeat(1, 139px);
+         gap: 10px;
+         margin: 0 15px;
+         margin-bottom: 25px;
+      }
+      &__item {
+         height: 139px;
+         width: 139px;
+      }
+   } 
+   .form {
+      &__container {
+         padding: 0 15px;
+      }
+      &__title {
+         font-size: 12px;
+         line-height: 14px;
+         margin: 0 calc(55px - 15px) 40px;
+      }
+      &__inputs {
+         &>*:not(:last-child){
+            margin-bottom: 15px;
+         }
+         margin-bottom: 20px;
+      }
+      &__inp {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__btn {
+         font-size: 12px;
+         line-height: 14px;
+         padding: 10px 30px;
+      }
+      &__addImg {
+         &>*:not(:last-child){
+         margin-bottom: 16px;
+         }
+      }
+      &__about {
+         font-size: 12px;
+         line-height: 14px;
+      }
+      &__form {
+         margin: 0;
+      }
+      &__image {
+         font-size: 12px;
+         line-height: 14px;
+         padding: 5px 10px;
+      }
+   }
+   .footer {
+      &__img {
+         max-width: 80px;
+         margin-bottom: 10px;
+      }
+      &__text {
+         margin-left: 0;
+         flex-direction: row;
+         &>*:last-child{
+            margin-bottom: 0;
+
+         }
+      }
+      &__content{
+         flex-direction: column;
+      }
+      &__details{
+         &>*{
+            text-align: right;  
+            font-size: 12px;
+            line-height: 14px;
+            &>*{
+               font-size: 12px;
+               line-height: 14px;
+            }
+         }
+      }
+      &__contacts {
+         flex-direction: column-reverse;
+         justify-content: space-between;
+         &>*{
+            text-align: left;  
+            font-size: 12px;
+            line-height: 14px;
+            &>*{
+               font-size: 12px;
+               line-height: 14px;
+            }
+         }
+      }
+      &__tel {
+         &>*:last-child {
+            display: none;
+         }
+      }
+   }
+   .swiper {
+      width: auto;
+      margin: 0 30px;
+   }
+   .swiper-button-next,.swiper-button-prev {
+      color: black;
+   }
+}
