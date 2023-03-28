@@ -21,7 +21,7 @@
 	transition: all ease-out 240ms;
 
 	&:hover {
-		transform: scale(#{$scaleMax});
+		transform: scale(1.05);
 	}
 
 	&:focus {
@@ -29,11 +29,11 @@
 	}
 
 	&:focus-visible {
-		transform: scale(#{$scaleMax}) translateY(-5%);
+		transform: scale(1.05) translateY(-5%);
 	}
 
 	&:active {
-		transform: scale(#{$scaleMin});
+		transform: scale(0.95);
 	}
 }
 
