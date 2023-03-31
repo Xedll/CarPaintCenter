@@ -1,0 +1,163 @@
+.page {
+
+   &__cases {
+      margin-bottom: 90px;
+   }
+}
+.cases {
+
+   &__container {
+   }
+
+   &__head {
+      text-align: center;
+      margin-top: 154px;
+      margin-bottom: 60px;
+      &>*:not(:last-child){
+         margin-bottom: 10px;
+      }
+   }
+
+   &__title {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 63px;
+      text-align: center;
+
+      color: #E7E7E7;
+   }
+
+   &__subtitle {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      max-width: 50%;
+      margin: 0 auto;
+      color: #252525;
+   }
+   &__desc{
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      /* identical to box height */
+      
+      text-align: center;
+      
+      color: #252525;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 360px);
+      grid-template-rows: repeat(3,minmax(360px, 1fr));
+      gap: 20px;
+   }
+
+   &__item {
+      background: #FFFFFF;
+      border: 2px solid #D4D4D4;
+      border-radius: 4px;
+      transition: all .2s;
+      position: relative;
+      &:hover{
+         border: 2px solid #ED7173;
+         
+         .cases__itemAbout{
+            display: flex;
+
+         }
+         .cases__itemContent{
+            display: none;
+         }
+      }
+   }
+
+   &__itemName {
+      margin: 22px;
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      /* identical to box height */
+      
+      
+      color: #252525;
+      &::after{
+         content:'';
+         float: right;
+         background: url('../../img/cases/icon.svg') no-repeat center;
+         width:25px;
+         height: 25px;
+      }
+   }
+
+   &__itemContent{
+      width: 100%;
+      height: 100%;
+   }
+   &__itemAbout{
+      width: 100%;
+      height: 100%;
+      padding: 21px;
+      display: none;
+      flex-direction: column;
+      align-items: space-between;
+   }
+
+   &__itemGrid {
+      flex:1 1 100%;
+      &>* {
+         font-family: 'Arial';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 18px;
+         margin-bottom: 15px;
+         color: #252525;
+         display: flex;
+         align-items: center;
+      }
+      &>*:not(:last-child){
+         &::before {
+            content:'';
+            display: block;
+            border-radius:50%;
+            min-width:8px;
+            min-height: 8px;
+            margin-right: 5px;
+            background: black;
+         }
+      }
+      &>*:last-child{
+         &::before {
+            content:'';
+            display: inline-block;
+            background: url('../../img/cases/garant.svg') no-repeat center;
+            width:25px;
+            margin-right: 5px;
+            height: 25px;
+         }  
+      }
+   }
+   &__itemBtn{
+      @include no-btn;
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+
+      color: #252525;
+   }
+   &__itemImg {
+      max-width: 100%;
+   }
+}

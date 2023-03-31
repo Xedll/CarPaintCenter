@@ -32,6 +32,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .img {
    width: 100%;
 }
+.main {
+   flex: 1 1 100%;
+}
 
 .page {
    &__main{
@@ -280,9 +283,48 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
          margin-left: 80px;
       }
    }
+   .cases {
+      &__grid {
+         grid-template-columns: repeat(3, 285px);
+         grid-template-rows: repeat(3, 285px);
+         gap: 17px;
+         margin: 0 36px;
+      }
+      &__title {
+         font-size: 40px;
+line-height: 47px;
+      }
+      &__subtitle{
+font-size: 16px;
+line-height: 18px;
+      }
+      &__desc {
+         font-size: 16px;
+line-height: 18px;
+      }
+      &__head{
+         margin-bottom: 45px;
+         margin-top: 139px;
+      }
+      &__itemName {
+         font-size: 16px;
+line-height: 18px;
+margin: 15px;
+&::after {
+   width:15px;
+   height:15px;
+}
+      }
+      &__itemGrid {
+         &>*{
+            font-size: 14px;
+            margin-bottom: 10px;
+         }
+      }
+   }
 }
 
-@media (max-width:768px){
+@media (max-width:758px){
    body.lock {
       overflow: hidden;
    }
@@ -301,6 +343,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
       }
       &__examples {
          margin: 40px 0 50px 0;
+      }
+      &__cases {
+         margin-bottom: 50px;
       }
    }
    .header {
@@ -546,6 +591,44 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
          margin-left: 24px;
       }
    }
+   .cases {
+      &__grid {
+         grid-template-columns: repeat(3, 224px);
+         grid-template-rows: repeat(3, 224px);
+         margin: 0 29px;
+         gap:14px;
+      }
+      &__itemName {
+         font-size: 16px;
+         line-height: 18px;
+         &::after{
+            width: 10px;
+            height: 10px;
+         }
+
+      }
+      &__head {
+         margin-top: 134px;
+         margin-bottom: 30px;
+      }
+      &__title {
+         font-size: 30px;
+         line-height: 35px;
+      }
+      &__subtitle, &__desc{
+         font-size: 14px;
+         line-height: 16px;
+      }
+      &__itemAbout {
+         padding: 13px;
+      }
+      &__itemGrid {
+         &>*{
+            font-size: 12px;
+            margin-bottom: 5px;
+         }
+      }
+   }
 }
 @media (max-width:320px){
    .page {
@@ -569,6 +652,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
       }
       &__form {
          padding: 30px 0 40px;
+      }
+      &__cases {
+         margin-bottom: 80px;
       }
    }
    .header {
@@ -878,5 +964,33 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    }
    .swiper-button-next,.swiper-button-prev {
       color: black;
+   }
+   .cases {
+      &__grid {
+         grid-template-columns: repeat(1, 290px);
+         grid-template-rows: repeat(9, 290px);
+         margin: 0 15px;
+         gap: 20px;
+      }
+      &__title {
+         font-size: 15px;
+         line-height: 18px;
+      }
+      &__subtitle, &__desc {
+         font-size: 12px;
+         line-height: 14px;
+         max-width: 100%;
+      }
+      &__head {
+         margin-left: 15px;
+         margin-top: 103px;
+         margin-right: 15px;
+      }
+      &__itemGrid {
+         &>*{
+            font-size: 15px;
+            margin-bottom: 10px;
+         }
+      }
    }
 }
